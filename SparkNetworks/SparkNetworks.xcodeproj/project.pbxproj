@@ -9,11 +9,20 @@
 /* Begin PBXBuildFile section */
 		DF587BEE244AFC3000468A11 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF587BED244AFC3000468A11 /* AppDelegate.swift */; };
 		DF587BF0244AFC3000468A11 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF587BEF244AFC3000468A11 /* SceneDelegate.swift */; };
-		DF587BF2244AFC3000468A11 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF587BF1244AFC3000468A11 /* ViewController.swift */; };
+		DF587BF2244AFC3000468A11 /* PersonalityTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF587BF1244AFC3000468A11 /* PersonalityTestViewController.swift */; };
 		DF587BF5244AFC3000468A11 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF587BF3244AFC3000468A11 /* Main.storyboard */; };
 		DF587BF7244AFC3200468A11 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DF587BF6244AFC3200468A11 /* Assets.xcassets */; };
 		DF587BFA244AFC3200468A11 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF587BF8244AFC3200468A11 /* LaunchScreen.storyboard */; };
 		DF587C05244AFC3200468A11 /* SparkNetworksTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF587C04244AFC3200468A11 /* SparkNetworksTests.swift */; };
+		DF587C23244B094100468A11 /* BaseCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF587C22244B094100468A11 /* BaseCoordinator.swift */; };
+		DF587C26244B793F00468A11 /* AppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF587C25244B793F00468A11 /* AppError.swift */; };
+		DF587C28244B796500468A11 /* ThemeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF587C27244B796500468A11 /* ThemeManager.swift */; };
+		DF587C2B244B79BD00468A11 /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF587C2A244B79BD00468A11 /* UIColor+Extensions.swift */; };
+		DF587C2D244B7D4900468A11 /* Theme.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DF587C2C244B7D4900468A11 /* Theme.xcassets */; };
+		DF587C2F244B80A900468A11 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF587C2E244B80A900468A11 /* UIViewController+Extension.swift */; };
+		DF587C31244B8F1A00468A11 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF587C30244B8F1A00468A11 /* AppCoordinator.swift */; };
+		DF587C33244B8F6600468A11 /* PersonalityTestCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF587C32244B8F6600468A11 /* PersonalityTestCoordinator.swift */; };
+		DF587C36244B8FEE00468A11 /* StoryboardInitializable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF587C35244B8FEE00468A11 /* StoryboardInitializable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,7 +39,7 @@
 		DF587BEA244AFC3000468A11 /* SparkNetworks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SparkNetworks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF587BED244AFC3000468A11 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DF587BEF244AFC3000468A11 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		DF587BF1244AFC3000468A11 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		DF587BF1244AFC3000468A11 /* PersonalityTestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalityTestViewController.swift; sourceTree = "<group>"; };
 		DF587BF4244AFC3000468A11 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DF587BF6244AFC3200468A11 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DF587BF9244AFC3200468A11 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -38,6 +47,15 @@
 		DF587C00244AFC3200468A11 /* SparkNetworksTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SparkNetworksTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF587C04244AFC3200468A11 /* SparkNetworksTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SparkNetworksTests.swift; sourceTree = "<group>"; };
 		DF587C06244AFC3200468A11 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DF587C22244B094100468A11 /* BaseCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCoordinator.swift; sourceTree = "<group>"; };
+		DF587C25244B793F00468A11 /* AppError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppError.swift; sourceTree = "<group>"; };
+		DF587C27244B796500468A11 /* ThemeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeManager.swift; sourceTree = "<group>"; };
+		DF587C2A244B79BD00468A11 /* UIColor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
+		DF587C2C244B7D4900468A11 /* Theme.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Theme.xcassets; sourceTree = "<group>"; };
+		DF587C2E244B80A900468A11 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
+		DF587C30244B8F1A00468A11 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		DF587C32244B8F6600468A11 /* PersonalityTestCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalityTestCoordinator.swift; sourceTree = "<group>"; };
+		DF587C35244B8FEE00468A11 /* StoryboardInitializable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardInitializable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +97,10 @@
 		DF587BEC244AFC3000468A11 /* SparkNetworks */ = {
 			isa = PBXGroup;
 			children = (
+				DF587C34244B8FC700468A11 /* Library */,
+				DF587C29244B799A00468A11 /* Extensions */,
+				DF587C24244B76D400468A11 /* Features */,
+				DF587C21244B090400468A11 /* BaseClasses */,
 				DF587C0F244B02D200468A11 /* Application */,
 				DF587C10244B02E600468A11 /* Scene */,
 				DF587C11244B030F00468A11 /* Storyboard */,
@@ -102,6 +124,7 @@
 			children = (
 				DF587BED244AFC3000468A11 /* AppDelegate.swift */,
 				DF587BEF244AFC3000468A11 /* SceneDelegate.swift */,
+				DF587C30244B8F1A00468A11 /* AppCoordinator.swift */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -109,7 +132,8 @@
 		DF587C10244B02E600468A11 /* Scene */ = {
 			isa = PBXGroup;
 			children = (
-				DF587BF1244AFC3000468A11 /* ViewController.swift */,
+				DF587BF1244AFC3000468A11 /* PersonalityTestViewController.swift */,
+				DF587C32244B8F6600468A11 /* PersonalityTestCoordinator.swift */,
 			);
 			path = Scene;
 			sourceTree = "<group>";
@@ -135,8 +159,43 @@
 			isa = PBXGroup;
 			children = (
 				DF587BF6244AFC3200468A11 /* Assets.xcassets */,
+				DF587C2C244B7D4900468A11 /* Theme.xcassets */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		DF587C21244B090400468A11 /* BaseClasses */ = {
+			isa = PBXGroup;
+			children = (
+				DF587C22244B094100468A11 /* BaseCoordinator.swift */,
+			);
+			path = BaseClasses;
+			sourceTree = "<group>";
+		};
+		DF587C24244B76D400468A11 /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				DF587C25244B793F00468A11 /* AppError.swift */,
+				DF587C27244B796500468A11 /* ThemeManager.swift */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		DF587C29244B799A00468A11 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				DF587C2A244B79BD00468A11 /* UIColor+Extensions.swift */,
+				DF587C2E244B80A900468A11 /* UIViewController+Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		DF587C34244B8FC700468A11 /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				DF587C35244B8FEE00468A11 /* StoryboardInitializable.swift */,
+			);
+			path = Library;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -221,6 +280,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DF587BFA244AFC3200468A11 /* LaunchScreen.storyboard in Resources */,
+				DF587C2D244B7D4900468A11 /* Theme.xcassets in Resources */,
 				DF587BF7244AFC3200468A11 /* Assets.xcassets in Resources */,
 				DF587BF5244AFC3000468A11 /* Main.storyboard in Resources */,
 			);
@@ -240,9 +300,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DF587BF2244AFC3000468A11 /* ViewController.swift in Sources */,
+				DF587C2F244B80A900468A11 /* UIViewController+Extension.swift in Sources */,
+				DF587BF2244AFC3000468A11 /* PersonalityTestViewController.swift in Sources */,
 				DF587BEE244AFC3000468A11 /* AppDelegate.swift in Sources */,
+				DF587C26244B793F00468A11 /* AppError.swift in Sources */,
+				DF587C36244B8FEE00468A11 /* StoryboardInitializable.swift in Sources */,
+				DF587C28244B796500468A11 /* ThemeManager.swift in Sources */,
+				DF587C2B244B79BD00468A11 /* UIColor+Extensions.swift in Sources */,
+				DF587C31244B8F1A00468A11 /* AppCoordinator.swift in Sources */,
 				DF587BF0244AFC3000468A11 /* SceneDelegate.swift in Sources */,
+				DF587C23244B094100468A11 /* BaseCoordinator.swift in Sources */,
+				DF587C33244B8F6600468A11 /* PersonalityTestCoordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

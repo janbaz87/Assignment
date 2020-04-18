@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  PersonalityTestViewController.swift
 //  SparkNetworks
 //
 //  Created by Janbaz Ali on 18/04/2020.
@@ -8,11 +8,16 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class PersonalityTestViewController: UIViewController,StoryboardInitializable {
+    static func storyboardName() -> String {
+        return "Main"
+    }
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        self.title = "Yellow"
     }
 
 
