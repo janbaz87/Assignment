@@ -24,6 +24,7 @@
 		DF587C33244B8F6600468A11 /* PersonalityTestCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF587C32244B8F6600468A11 /* PersonalityTestCoordinator.swift */; };
 		DF587C36244B8FEE00468A11 /* StoryboardInitializable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF587C35244B8FEE00468A11 /* StoryboardInitializable.swift */; };
 		DF587C38244C843900468A11 /* DequeueInitializable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF587C37244C843900468A11 /* DequeueInitializable.swift */; };
+		DF587C3A244C853700468A11 /* PersonalityTestViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF587C39244C853700468A11 /* PersonalityTestViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +59,7 @@
 		DF587C32244B8F6600468A11 /* PersonalityTestCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalityTestCoordinator.swift; sourceTree = "<group>"; };
 		DF587C35244B8FEE00468A11 /* StoryboardInitializable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardInitializable.swift; sourceTree = "<group>"; };
 		DF587C37244C843900468A11 /* DequeueInitializable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DequeueInitializable.swift; sourceTree = "<group>"; };
+		DF587C39244C853700468A11 /* PersonalityTestViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalityTestViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,8 +136,9 @@
 		DF587C10244B02E600468A11 /* Scene */ = {
 			isa = PBXGroup;
 			children = (
-				DF587BF1244AFC3000468A11 /* PersonalityTestViewController.swift */,
 				DF587C32244B8F6600468A11 /* PersonalityTestCoordinator.swift */,
+				DF587BF1244AFC3000468A11 /* PersonalityTestViewController.swift */,
+				DF587C39244C853700468A11 /* PersonalityTestViewModel.swift */,
 			);
 			path = Scene;
 			sourceTree = "<group>";
@@ -312,6 +315,7 @@
 				DF587C28244B796500468A11 /* ThemeManager.swift in Sources */,
 				DF587C2B244B79BD00468A11 /* UIColor+Extensions.swift in Sources */,
 				DF587C31244B8F1A00468A11 /* AppCoordinator.swift in Sources */,
+				DF587C3A244C853700468A11 /* PersonalityTestViewModel.swift in Sources */,
 				DF587BF0244AFC3000468A11 /* SceneDelegate.swift in Sources */,
 				DF587C23244B094100468A11 /* BaseCoordinator.swift in Sources */,
 				DF587C33244B8F6600468A11 /* PersonalityTestCoordinator.swift in Sources */,
