@@ -23,6 +23,7 @@
 		DF587C31244B8F1A00468A11 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF587C30244B8F1A00468A11 /* AppCoordinator.swift */; };
 		DF587C33244B8F6600468A11 /* PersonalityTestCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF587C32244B8F6600468A11 /* PersonalityTestCoordinator.swift */; };
 		DF587C36244B8FEE00468A11 /* StoryboardInitializable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF587C35244B8FEE00468A11 /* StoryboardInitializable.swift */; };
+		DF587C38244C843900468A11 /* DequeueInitializable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF587C37244C843900468A11 /* DequeueInitializable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,7 @@
 		DF587C30244B8F1A00468A11 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		DF587C32244B8F6600468A11 /* PersonalityTestCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalityTestCoordinator.swift; sourceTree = "<group>"; };
 		DF587C35244B8FEE00468A11 /* StoryboardInitializable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardInitializable.swift; sourceTree = "<group>"; };
+		DF587C37244C843900468A11 /* DequeueInitializable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DequeueInitializable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -194,6 +196,7 @@
 			isa = PBXGroup;
 			children = (
 				DF587C35244B8FEE00468A11 /* StoryboardInitializable.swift */,
+				DF587C37244C843900468A11 /* DequeueInitializable.swift */,
 			);
 			path = Library;
 			sourceTree = "<group>";
@@ -300,6 +303,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DF587C38244C843900468A11 /* DequeueInitializable.swift in Sources */,
 				DF587C2F244B80A900468A11 /* UIViewController+Extension.swift in Sources */,
 				DF587BF2244AFC3000468A11 /* PersonalityTestViewController.swift in Sources */,
 				DF587BEE244AFC3000468A11 /* AppDelegate.swift in Sources */,
