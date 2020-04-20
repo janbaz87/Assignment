@@ -15,7 +15,7 @@ protocol PersonalityTestViewModelInput {
 protocol PersonalityTestViewModelOutput {
     func title()->String
     func numberOfRows()->Int
-    func viewModel(for indexPath: IndexPath)
+    func viewModel(for indexPath: IndexPath) -> ReusableTableViewCellViewModelType
 }
 
 protocol PersonalityTestViewModelType {
@@ -40,15 +40,18 @@ class PersonalityTestViewModel : PersonalityTestViewModelType  {
 //MARk: PersonalityTestViewModelOutputs
 extension PersonalityTestViewModel:PersonalityTestViewModelOutput {
     
-    func rowSelected(at indexPath: IndexPath) {
-        
+    func viewModel(for indexPath: IndexPath) -> ReusableTableViewCellViewModelType {
+        if indexPath.row == 0 {
+             return QuestionTableViewCellViewModel()
+        }
+        return AnswerTableViewCellViewModel()
     }
 
 }
 
 //MARk: PersonalityTestViewModelInputs
 extension PersonalityTestViewModel:PersonalityTestViewModelInput {
-    
+
     func title() -> String {
         return ""
     }
@@ -57,8 +60,7 @@ extension PersonalityTestViewModel:PersonalityTestViewModelInput {
         return 10
     }
     
-    func viewModel(for indexPath: IndexPath) {
+    func rowSelected(at indexPath: IndexPath) {
         
     }
-
 }

@@ -25,6 +25,14 @@
 		DF587C36244B8FEE00468A11 /* StoryboardInitializable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF587C35244B8FEE00468A11 /* StoryboardInitializable.swift */; };
 		DF587C38244C843900468A11 /* DequeueInitializable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF587C37244C843900468A11 /* DequeueInitializable.swift */; };
 		DF587C3A244C853700468A11 /* PersonalityTestViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF587C39244C853700468A11 /* PersonalityTestViewModel.swift */; };
+		DF587C3C244CCD7100468A11 /* BaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF587C3B244CCD7100468A11 /* BaseTableViewCell.swift */; };
+		DF587C3E244CD09F00468A11 /* ReuseableTableVeiwCellViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF587C3D244CD09F00468A11 /* ReuseableTableVeiwCellViewModelType.swift */; };
+		DF587C44244CD36200468A11 /* QuestionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF587C42244CD36200468A11 /* QuestionTableViewCell.swift */; };
+		DF587C45244CD36200468A11 /* QuestionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF587C43244CD36200468A11 /* QuestionTableViewCell.xib */; };
+		DF587C48244CD53C00468A11 /* QuestionTableViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF587C47244CD53C00468A11 /* QuestionTableViewCellViewModel.swift */; };
+		DF587C4B244CD9F300468A11 /* AnswerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF587C49244CD9F300468A11 /* AnswerTableViewCell.swift */; };
+		DF587C4C244CD9F300468A11 /* AnswerTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF587C4A244CD9F300468A11 /* AnswerTableViewCell.xib */; };
+		DF587C4E244CDA1500468A11 /* AnswerTableViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF587C4D244CDA1500468A11 /* AnswerTableViewCellViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +68,14 @@
 		DF587C35244B8FEE00468A11 /* StoryboardInitializable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardInitializable.swift; sourceTree = "<group>"; };
 		DF587C37244C843900468A11 /* DequeueInitializable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DequeueInitializable.swift; sourceTree = "<group>"; };
 		DF587C39244C853700468A11 /* PersonalityTestViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalityTestViewModel.swift; sourceTree = "<group>"; };
+		DF587C3B244CCD7100468A11 /* BaseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableViewCell.swift; sourceTree = "<group>"; };
+		DF587C3D244CD09F00468A11 /* ReuseableTableVeiwCellViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReuseableTableVeiwCellViewModelType.swift; sourceTree = "<group>"; };
+		DF587C42244CD36200468A11 /* QuestionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionTableViewCell.swift; sourceTree = "<group>"; };
+		DF587C43244CD36200468A11 /* QuestionTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QuestionTableViewCell.xib; sourceTree = "<group>"; };
+		DF587C47244CD53C00468A11 /* QuestionTableViewCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionTableViewCellViewModel.swift; sourceTree = "<group>"; };
+		DF587C49244CD9F300468A11 /* AnswerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerTableViewCell.swift; sourceTree = "<group>"; };
+		DF587C4A244CD9F300468A11 /* AnswerTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AnswerTableViewCell.xib; sourceTree = "<group>"; };
+		DF587C4D244CDA1500468A11 /* AnswerTableViewCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerTableViewCellViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,13 +117,15 @@
 		DF587BEC244AFC3000468A11 /* SparkNetworks */ = {
 			isa = PBXGroup;
 			children = (
+				DF587C0F244B02D200468A11 /* Application */,
+				DF587C10244B02E600468A11 /* Scene */,
+				DF587C11244B030F00468A11 /* Storyboard */,
+				DF587C50244CDF8E00468A11 /* Repository */,
+				DF587C4F244CDF8100468A11 /* Network */,
 				DF587C34244B8FC700468A11 /* Library */,
 				DF587C29244B799A00468A11 /* Extensions */,
 				DF587C24244B76D400468A11 /* Features */,
 				DF587C21244B090400468A11 /* BaseClasses */,
-				DF587C0F244B02D200468A11 /* Application */,
-				DF587C10244B02E600468A11 /* Scene */,
-				DF587C11244B030F00468A11 /* Storyboard */,
 				DF587C1E244B038800468A11 /* Resources */,
 				DF587C1D244B036F00468A11 /* Configurations */,
 			);
@@ -136,9 +154,7 @@
 		DF587C10244B02E600468A11 /* Scene */ = {
 			isa = PBXGroup;
 			children = (
-				DF587C32244B8F6600468A11 /* PersonalityTestCoordinator.swift */,
-				DF587BF1244AFC3000468A11 /* PersonalityTestViewController.swift */,
-				DF587C39244C853700468A11 /* PersonalityTestViewModel.swift */,
+				DF587C3F244CD27B00468A11 /* PersonalityTest */,
 			);
 			path = Scene;
 			sourceTree = "<group>";
@@ -173,6 +189,7 @@
 			isa = PBXGroup;
 			children = (
 				DF587C22244B094100468A11 /* BaseCoordinator.swift */,
+				DF587C3B244CCD7100468A11 /* BaseTableViewCell.swift */,
 			);
 			path = BaseClasses;
 			sourceTree = "<group>";
@@ -200,8 +217,55 @@
 			children = (
 				DF587C35244B8FEE00468A11 /* StoryboardInitializable.swift */,
 				DF587C37244C843900468A11 /* DequeueInitializable.swift */,
+				DF587C3D244CD09F00468A11 /* ReuseableTableVeiwCellViewModelType.swift */,
 			);
 			path = Library;
+			sourceTree = "<group>";
+		};
+		DF587C3F244CD27B00468A11 /* PersonalityTest */ = {
+			isa = PBXGroup;
+			children = (
+				DF587C41244CD2A300468A11 /* ViewModels */,
+				DF587C40244CD29300468A11 /* Views */,
+				DF587C32244B8F6600468A11 /* PersonalityTestCoordinator.swift */,
+				DF587BF1244AFC3000468A11 /* PersonalityTestViewController.swift */,
+				DF587C39244C853700468A11 /* PersonalityTestViewModel.swift */,
+			);
+			path = PersonalityTest;
+			sourceTree = "<group>";
+		};
+		DF587C40244CD29300468A11 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				DF587C42244CD36200468A11 /* QuestionTableViewCell.swift */,
+				DF587C43244CD36200468A11 /* QuestionTableViewCell.xib */,
+				DF587C49244CD9F300468A11 /* AnswerTableViewCell.swift */,
+				DF587C4A244CD9F300468A11 /* AnswerTableViewCell.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		DF587C41244CD2A300468A11 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				DF587C47244CD53C00468A11 /* QuestionTableViewCellViewModel.swift */,
+				DF587C4D244CDA1500468A11 /* AnswerTableViewCellViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		DF587C4F244CDF8100468A11 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		DF587C50244CDF8E00468A11 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Repository;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -288,6 +352,8 @@
 				DF587BFA244AFC3200468A11 /* LaunchScreen.storyboard in Resources */,
 				DF587C2D244B7D4900468A11 /* Theme.xcassets in Resources */,
 				DF587BF7244AFC3200468A11 /* Assets.xcassets in Resources */,
+				DF587C4C244CD9F300468A11 /* AnswerTableViewCell.xib in Resources */,
+				DF587C45244CD36200468A11 /* QuestionTableViewCell.xib in Resources */,
 				DF587BF5244AFC3000468A11 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -307,15 +373,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				DF587C38244C843900468A11 /* DequeueInitializable.swift in Sources */,
+				DF587C44244CD36200468A11 /* QuestionTableViewCell.swift in Sources */,
 				DF587C2F244B80A900468A11 /* UIViewController+Extension.swift in Sources */,
 				DF587BF2244AFC3000468A11 /* PersonalityTestViewController.swift in Sources */,
+				DF587C3E244CD09F00468A11 /* ReuseableTableVeiwCellViewModelType.swift in Sources */,
 				DF587BEE244AFC3000468A11 /* AppDelegate.swift in Sources */,
 				DF587C26244B793F00468A11 /* AppError.swift in Sources */,
+				DF587C4E244CDA1500468A11 /* AnswerTableViewCellViewModel.swift in Sources */,
+				DF587C48244CD53C00468A11 /* QuestionTableViewCellViewModel.swift in Sources */,
 				DF587C36244B8FEE00468A11 /* StoryboardInitializable.swift in Sources */,
 				DF587C28244B796500468A11 /* ThemeManager.swift in Sources */,
 				DF587C2B244B79BD00468A11 /* UIColor+Extensions.swift in Sources */,
 				DF587C31244B8F1A00468A11 /* AppCoordinator.swift in Sources */,
 				DF587C3A244C853700468A11 /* PersonalityTestViewModel.swift in Sources */,
+				DF587C4B244CD9F300468A11 /* AnswerTableViewCell.swift in Sources */,
+				DF587C3C244CCD7100468A11 /* BaseTableViewCell.swift in Sources */,
 				DF587BF0244AFC3000468A11 /* SceneDelegate.swift in Sources */,
 				DF587C23244B094100468A11 /* BaseCoordinator.swift in Sources */,
 				DF587C33244B8F6600468A11 /* PersonalityTestCoordinator.swift in Sources */,

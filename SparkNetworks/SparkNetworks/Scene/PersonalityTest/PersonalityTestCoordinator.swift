@@ -20,6 +20,8 @@ class PersonalityTestCoordinator: BaseCoordinator<Void> {
     
     override func start() {
         let viewController = PersonalityTestViewController.initFromStoryboard()
+        let viewModel = PersonalityTestViewModel()
+        viewController.viewModel = viewModel
         
         rootViewController = viewController
         navigationController = UINavigationController(rootViewController: viewController)
