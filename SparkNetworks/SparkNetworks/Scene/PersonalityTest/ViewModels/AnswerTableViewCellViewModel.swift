@@ -12,10 +12,17 @@ protocol AnswerTableViewCellViewModelType {
     
 }
 
-class AnswerTableViewCellViewModel: ReusableTableViewCellViewModelType {
+class AnswerTableViewCellViewModel<T>: ReusableTableViewCellViewModelType {
     
     var reusableIdentifier: String {return AnswerTableViewCell.reuseIdentifier }
     
+    //MARK: Properties
+    let asnwer: T
+    
+    //MARK: Init
+    init(answer: T) {
+        self.asnwer = answer
+    }
     
 }
 

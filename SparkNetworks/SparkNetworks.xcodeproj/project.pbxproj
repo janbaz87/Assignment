@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DF1E9521244F2A61007B3878 /* PersonalityTestRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF1E9520244F2A61007B3878 /* PersonalityTestRepository.swift */; };
+		DF1E9523244F2AE7007B3878 /* PersonalityTestService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF1E9522244F2AE7007B3878 /* PersonalityTestService.swift */; };
+		DF1E9525244F2B8C007B3878 /* BaseRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF1E9524244F2B8C007B3878 /* BaseRepository.swift */; };
+		DF26BD15244D9CF100C9D9F8 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF26BD14244D9CF100C9D9F8 /* Router.swift */; };
+		DF26BD18244DA30E00C9D9F8 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF26BD17244DA30E00C9D9F8 /* APIClient.swift */; };
 		DF587BEE244AFC3000468A11 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF587BED244AFC3000468A11 /* AppDelegate.swift */; };
 		DF587BF0244AFC3000468A11 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF587BEF244AFC3000468A11 /* SceneDelegate.swift */; };
 		DF587BF2244AFC3000468A11 /* PersonalityTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF587BF1244AFC3000468A11 /* PersonalityTestViewController.swift */; };
@@ -33,6 +38,7 @@
 		DF587C4B244CD9F300468A11 /* AnswerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF587C49244CD9F300468A11 /* AnswerTableViewCell.swift */; };
 		DF587C4C244CD9F300468A11 /* AnswerTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF587C4A244CD9F300468A11 /* AnswerTableViewCell.xib */; };
 		DF587C4E244CDA1500468A11 /* AnswerTableViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF587C4D244CDA1500468A11 /* AnswerTableViewCellViewModel.swift */; };
+		DFE72B5B244E270200C2D7D4 /* PersonalityTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFE72B5A244E270200C2D7D4 /* PersonalityTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +52,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DF1E9520244F2A61007B3878 /* PersonalityTestRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalityTestRepository.swift; sourceTree = "<group>"; };
+		DF1E9522244F2AE7007B3878 /* PersonalityTestService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalityTestService.swift; sourceTree = "<group>"; };
+		DF1E9524244F2B8C007B3878 /* BaseRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseRepository.swift; sourceTree = "<group>"; };
+		DF26BD14244D9CF100C9D9F8 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		DF26BD17244DA30E00C9D9F8 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
 		DF587BEA244AFC3000468A11 /* SparkNetworks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SparkNetworks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF587BED244AFC3000468A11 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DF587BEF244AFC3000468A11 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -76,6 +87,7 @@
 		DF587C49244CD9F300468A11 /* AnswerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerTableViewCell.swift; sourceTree = "<group>"; };
 		DF587C4A244CD9F300468A11 /* AnswerTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AnswerTableViewCell.xib; sourceTree = "<group>"; };
 		DF587C4D244CDA1500468A11 /* AnswerTableViewCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerTableViewCellViewModel.swift; sourceTree = "<group>"; };
+		DFE72B5A244E270200C2D7D4 /* PersonalityTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalityTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +108,37 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DF26BD11244D9BB900C9D9F8 /* Routes */ = {
+			isa = PBXGroup;
+			children = (
+				DF26BD14244D9CF100C9D9F8 /* Router.swift */,
+			);
+			path = Routes;
+			sourceTree = "<group>";
+		};
+		DF26BD12244D9BC300C9D9F8 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				DF1E9522244F2AE7007B3878 /* PersonalityTestService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		DF26BD13244D9BD500C9D9F8 /* Request */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Request;
+			sourceTree = "<group>";
+		};
+		DF26BD16244DA2DE00C9D9F8 /* APIClient */ = {
+			isa = PBXGroup;
+			children = (
+				DF26BD17244DA30E00C9D9F8 /* APIClient.swift */,
+			);
+			path = APIClient;
+			sourceTree = "<group>";
+		};
 		DF587BE1244AFC3000468A11 = {
 			isa = PBXGroup;
 			children = (
@@ -117,6 +160,7 @@
 		DF587BEC244AFC3000468A11 /* SparkNetworks */ = {
 			isa = PBXGroup;
 			children = (
+				DFE72B59244E26D600C2D7D4 /* Models */,
 				DF587C0F244B02D200468A11 /* Application */,
 				DF587C10244B02E600468A11 /* Scene */,
 				DF587C11244B030F00468A11 /* Storyboard */,
@@ -257,6 +301,10 @@
 		DF587C4F244CDF8100468A11 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				DF26BD16244DA2DE00C9D9F8 /* APIClient */,
+				DF26BD13244D9BD500C9D9F8 /* Request */,
+				DF26BD12244D9BC300C9D9F8 /* Service */,
+				DF26BD11244D9BB900C9D9F8 /* Routes */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -264,8 +312,18 @@
 		DF587C50244CDF8E00468A11 /* Repository */ = {
 			isa = PBXGroup;
 			children = (
+				DF1E9524244F2B8C007B3878 /* BaseRepository.swift */,
+				DF1E9520244F2A61007B3878 /* PersonalityTestRepository.swift */,
 			);
 			path = Repository;
+			sourceTree = "<group>";
+		};
+		DFE72B59244E26D600C2D7D4 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				DFE72B5A244E270200C2D7D4 /* PersonalityTest.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -373,6 +431,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				DF587C38244C843900468A11 /* DequeueInitializable.swift in Sources */,
+				DF1E9521244F2A61007B3878 /* PersonalityTestRepository.swift in Sources */,
+				DF1E9523244F2AE7007B3878 /* PersonalityTestService.swift in Sources */,
 				DF587C44244CD36200468A11 /* QuestionTableViewCell.swift in Sources */,
 				DF587C2F244B80A900468A11 /* UIViewController+Extension.swift in Sources */,
 				DF587BF2244AFC3000468A11 /* PersonalityTestViewController.swift in Sources */,
@@ -380,16 +440,20 @@
 				DF587BEE244AFC3000468A11 /* AppDelegate.swift in Sources */,
 				DF587C26244B793F00468A11 /* AppError.swift in Sources */,
 				DF587C4E244CDA1500468A11 /* AnswerTableViewCellViewModel.swift in Sources */,
+				DF26BD18244DA30E00C9D9F8 /* APIClient.swift in Sources */,
 				DF587C48244CD53C00468A11 /* QuestionTableViewCellViewModel.swift in Sources */,
 				DF587C36244B8FEE00468A11 /* StoryboardInitializable.swift in Sources */,
 				DF587C28244B796500468A11 /* ThemeManager.swift in Sources */,
 				DF587C2B244B79BD00468A11 /* UIColor+Extensions.swift in Sources */,
+				DF26BD15244D9CF100C9D9F8 /* Router.swift in Sources */,
+				DFE72B5B244E270200C2D7D4 /* PersonalityTest.swift in Sources */,
 				DF587C31244B8F1A00468A11 /* AppCoordinator.swift in Sources */,
 				DF587C3A244C853700468A11 /* PersonalityTestViewModel.swift in Sources */,
 				DF587C4B244CD9F300468A11 /* AnswerTableViewCell.swift in Sources */,
 				DF587C3C244CCD7100468A11 /* BaseTableViewCell.swift in Sources */,
 				DF587BF0244AFC3000468A11 /* SceneDelegate.swift in Sources */,
 				DF587C23244B094100468A11 /* BaseCoordinator.swift in Sources */,
+				DF1E9525244F2B8C007B3878 /* BaseRepository.swift in Sources */,
 				DF587C33244B8F6600468A11 /* PersonalityTestCoordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

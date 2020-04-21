@@ -8,13 +8,41 @@
 
 import Foundation
 
-protocol QuestionTableViewCellViewModelType {
+protocol QuestionTableViewCellViewModelInputs {
     
+}
+protocol QuestionTableViewCellViewModelOutputs {
+    func text() -> String
+}
+protocol QuestionTableViewCellViewModelType {
+    var inputs : QuestionTableViewCellViewModelInputs { get }
+    var outputs : QuestionTableViewCellViewModelOutputs { get }
 }
 
 class QuestionTableViewCellViewModel: ReusableTableViewCellViewModelType, QuestionTableViewCellViewModelType {
     
-    var reusableIdentifier: String {return QuestionTableViewCell.reuseIdentifier }
+    var inputs: QuestionTableViewCellViewModelInputs { return self }
+    var outputs: QuestionTableViewCellViewModelOutputs { return self }
     
+    //MARK: Properties
+    var reusableIdentifier: String {return QuestionTableViewCell.reuseIdentifier }
+    //MARK: Properties
+    let question: String
+    
+    //MARK: Init
+    init(question: String) {
+        self.question = question
+    }
+    
+}
+
+extension QuestionTableViewCellViewModel: QuestionTableViewCellViewModelOutputs {
+    
+    func text() -> String {
+        return question
+    }
+}
+
+extension QuestionTableViewCellViewModel: QuestionTableViewCellViewModelInputs {
     
 }

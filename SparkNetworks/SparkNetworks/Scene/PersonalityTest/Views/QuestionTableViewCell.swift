@@ -32,5 +32,10 @@ class QuestionTableViewCell: BaseTableViewCell {
     override func configure(with viewModel: Any) {
         guard let viewModel = viewModel as? QuestionTableViewCellViewModelType else { return }
         self.viewModel = viewModel
+        render()
+    }
+    
+    func render() {
+        questionLabel.text = viewModel.outputs.text()
     }
 }
