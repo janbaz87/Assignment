@@ -120,7 +120,8 @@ extension PersonalityTestViewModel:PersonalityTestViewModelInput {
         }
         currentIndex -= 1
         generateViewModels(question: test.questions[currentIndex])
-        completion(.previous)
+        let status =  currentIndex == 0 ? TestStatus.start : TestStatus.previous
+        completion(status)
     }
     
     func rowSelected(at indexPath: IndexPath, compeletion : @escaping (TestStatus)->())  {

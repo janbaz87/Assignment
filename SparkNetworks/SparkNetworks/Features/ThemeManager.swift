@@ -21,7 +21,7 @@ enum Theme: Int {
     var mainColor: UIColor {
         switch self {
         case .theme1:
-            return UIColor.primary
+            return UIColor.offwhite_darkgray
         }
     }
     var barStyle: UIBarStyle {
@@ -42,8 +42,8 @@ struct ThemeManager {
         
         UINavigationBar.appearance().barStyle = theme.barStyle
         UINavigationBar.appearance().barTintColor = theme.mainColor
-        UINavigationBar.appearance().tintColor = .universalColor3
-        UINavigationBar.appearance().titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.universalColor3,NSAttributedString.Key.font: UIFont.systemFont(ofSize: FontSize.extraLarge.rawValue, weight: .bold)]
+        UINavigationBar.appearance().tintColor = .offwhite_darkgray
+        UINavigationBar.appearance().titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.black_white,NSAttributedString.Key.font: UIFont.systemFont(ofSize: FontSize.extraLarge.rawValue, weight: .bold)]
         UINavigationBar.appearance().isTranslucent = true
     }
     static func changeNavigationBarTint(color: UIColor){

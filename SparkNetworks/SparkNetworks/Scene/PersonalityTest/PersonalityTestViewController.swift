@@ -10,6 +10,8 @@ import UIKit
 
 class PersonalityTestViewController: UIViewController,StoryboardInitializable {
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var nextButton: UIButton!
+    @IBOutlet weak var previousButton: UIButton!
     static func storyboardName() -> String {
         return "Main"
     }
@@ -24,9 +26,14 @@ class PersonalityTestViewController: UIViewController,StoryboardInitializable {
         self.title = "Personality Test"
         registerXibs()
         viewModel.inputs.start()
+        render()
     }
     
     //MARK: Custom methods
+    func render() {
+        nextButton.roundCorners(with: 8)
+        previousButton.roundCorners(with: 8)
+    }
     func registerXibs() {
         QuestionTableViewCell.register(tableView: tableView)
         AnswerTableViewCell.register(tableView: tableView)
@@ -50,13 +57,22 @@ class PersonalityTestViewController: UIViewController,StoryboardInitializable {
         
         switch status {
         case .start:
+            previousButton.isEnabled = false
+            nextButton.isEnabled = true
+            self.tableView.reloadSections(sections as IndexSet, with: .right)
             break
         case .end:
+            previousButton.isEnabled = true
+            nextButton.isEnabled = false
             break
         case .previous:
-             self.tableView.reloadSections(sections as IndexSet, with: .right)
+            previousButton.isEnabled = true
+            nextButton.isEnabled = true
+            self.tableView.reloadSections(sections as IndexSet, with: .right)
         case .next:
-             self.tableView.reloadSections(sections as IndexSet, with: .left)
+            previousButton.isEnabled = true
+            nextButton.isEnabled = true
+            self.tableView.reloadSections(sections as IndexSet, with: .left)
         }
     }
 }

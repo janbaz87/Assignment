@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina5_5" orientation="landscape" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
@@ -20,16 +20,64 @@
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The personality test question come here?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hTn-8C-5Wy">
                         <rect key="frame" x="16" y="20" width="288" height="20"/>
                         <fontDescription key="fontDescription" type="system" pointSize="19"/>
-                        <color key="textColor" name="primary"/>
+                        <color key="textColor" name="black_white"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="bottom" secondItem="hTn-8C-5Wy" secondAttribute="bottom" constant="20" id="2sH-WY-hiu"/>
-                    <constraint firstItem="hTn-8C-5Wy" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="20" id="C1U-Ov-1Kc"/>
-                    <constraint firstAttribute="trailing" secondItem="hTn-8C-5Wy" secondAttribute="trailing" constant="16" id="KlM-Hr-Gzd"/>
-                    <constraint firstItem="hTn-8C-5Wy" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="wAR-8g-EKe"/>
+                    <constraint firstItem="hTn-8C-5Wy" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="30" id="D07-aX-EBw"/>
+                    <constraint firstItem="hTn-8C-5Wy" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="30" id="EV0-sj-yvS"/>
+                    <constraint firstAttribute="bottom" secondItem="hTn-8C-5Wy" secondAttribute="bottom" constant="20" id="HnC-ZH-5z9"/>
+                    <constraint firstAttribute="trailing" secondItem="hTn-8C-5Wy" secondAttribute="trailing" constant="30" id="WE7-86-5Qh"/>
+                    <constraint firstAttribute="bottom" secondItem="hTn-8C-5Wy" secondAttribute="bottom" constant="20" id="bbb-Ew-xng"/>
+                    <constraint firstAttribute="trailing" secondItem="hTn-8C-5Wy" secondAttribute="trailing" constant="16" id="iQ1-hV-gmq"/>
+                    <constraint firstItem="hTn-8C-5Wy" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="20" id="izP-1k-r80"/>
+                    <constraint firstItem="hTn-8C-5Wy" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="meN-2v-xhm"/>
+                    <constraint firstItem="hTn-8C-5Wy" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="pL9-UY-SGt"/>
+                    <constraint firstAttribute="bottom" secondItem="hTn-8C-5Wy" secondAttribute="bottom" constant="30" id="rl9-8k-Iby"/>
+                    <constraint firstItem="hTn-8C-5Wy" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="20" id="swb-Xj-eet"/>
+                    <constraint firstAttribute="trailing" secondItem="hTn-8C-5Wy" secondAttribute="trailing" constant="16" id="ziz-eE-F9s"/>
                 </constraints>
+                <variation key="default">
+                    <mask key="constraints">
+                        <exclude reference="D07-aX-EBw"/>
+                        <exclude reference="EV0-sj-yvS"/>
+                        <exclude reference="HnC-ZH-5z9"/>
+                        <exclude reference="WE7-86-5Qh"/>
+                        <exclude reference="bbb-Ew-xng"/>
+                        <exclude reference="iQ1-hV-gmq"/>
+                        <exclude reference="izP-1k-r80"/>
+                        <exclude reference="meN-2v-xhm"/>
+                        <exclude reference="pL9-UY-SGt"/>
+                        <exclude reference="rl9-8k-Iby"/>
+                        <exclude reference="swb-Xj-eet"/>
+                        <exclude reference="ziz-eE-F9s"/>
+                    </mask>
+                </variation>
+                <variation key="heightClass=compact-widthClass=regular">
+                    <mask key="constraints">
+                        <include reference="bbb-Ew-xng"/>
+                        <include reference="izP-1k-r80"/>
+                        <include reference="pL9-UY-SGt"/>
+                        <include reference="ziz-eE-F9s"/>
+                    </mask>
+                </variation>
+                <variation key="heightClass=regular-widthClass=compact">
+                    <mask key="constraints">
+                        <include reference="HnC-ZH-5z9"/>
+                        <include reference="iQ1-hV-gmq"/>
+                        <include reference="meN-2v-xhm"/>
+                        <include reference="swb-Xj-eet"/>
+                    </mask>
+                </variation>
+                <variation key="heightClass=regular-widthClass=regular">
+                    <mask key="constraints">
+                        <include reference="D07-aX-EBw"/>
+                        <include reference="EV0-sj-yvS"/>
+                        <include reference="WE7-86-5Qh"/>
+                        <include reference="rl9-8k-Iby"/>
+                    </mask>
+                </variation>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
@@ -39,7 +87,7 @@
         </tableViewCell>
     </objects>
     <resources>
-        <namedColor name="primary">
+        <namedColor name="black_white">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
