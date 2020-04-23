@@ -28,7 +28,7 @@ extension UIViewController {
         DispatchQueue.main.async {
             let container: UIView = UIView()
             container.frame = self.view.frame
-            container.center = CGPoint(x: self.view.center.x,y: self.view.center.y - 100)
+            container.center = self.view.center//CGPoint(x: self.view.center.x,y: self.view.center.y - 100)
             container.tag = 999
             container.backgroundColor = UIColor.clear
             container.isHidden = true
@@ -41,11 +41,11 @@ extension UIViewController {
             loadingView.layer.cornerRadius = 10
             
             let activityIndicator: UIActivityIndicatorView = UIActivityIndicatorView()
-            activityIndicator.frame = CGRect(x: 0.0, y: 0.0, width: 40.0, height: 40.0);
+            activityIndicator.frame = CGRect(x: 0.0, y: 0.0, width: 60.0, height: 60.0);
             activityIndicator.style =
                 UIActivityIndicatorView.Style.large
             activityIndicator.color = UIColor.white
-            activityIndicator.center = CGPoint(x: loadingView.frame.size.width / 2,
+            activityIndicator.center =  CGPoint(x: loadingView.frame.size.width / 2,
                                                y: loadingView.frame.size.height / 2);
             loadingView.addSubview(activityIndicator)
             container.addSubview(loadingView)

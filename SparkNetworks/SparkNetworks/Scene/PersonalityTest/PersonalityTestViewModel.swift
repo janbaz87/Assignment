@@ -9,17 +9,16 @@
 import Foundation
 
 protocol PersonalityTestViewModelInput {
-    func start()
-    func rowSelected(at indexPath: IndexPath, compeletion : @escaping (TestStatus)->())
+    func rowSelected(at indexPath: IndexPath, compeletion : @escaping ()->())
     func nextQuestion(completion: @escaping (TestStatus)->() )
-    func previousQuestion(completion: @escaping (TestStatus)->() )
+    func fetchTest(completion: @escaping (AppError?)->())
+    func testCompleted()
 }
 
 protocol PersonalityTestViewModelOutput {
     func title()->String
     func numberOfRows()->Int
     func viewModel(for indexPath: IndexPath) -> ReusableTableViewCellViewModelType
-    
 }
 
 protocol PersonalityTestViewModelType {
@@ -33,42 +32,47 @@ class PersonalityTestViewModel : PersonalityTestViewModelType  {
     var outputs: PersonalityTestViewModelOutput { return self }
     
     //MARK: Properties
-    var test = PersonalityTest.mocked
-    var viewModels = [ReusableTableViewCellViewModelType]()
-    var currentIndex = 0
+    private var repository = PersonalityTestRepository()
+    private var personalityTest : PersonalityTest!
+    var viewModelsArray = [[ReusableTableViewCellViewModelType]]()
+    private var currentIndex = 0
+    private var parentIndex = 0
+    private var answersDictionary = [String : String]()
+    private var coordinator : PersonalityTestCoordinator
     
     //MARK: Init
-    init() {
-        
+    init(coordinator: PersonalityTestCoordinator) {
+        self.coordinator = coordinator
     }
    
-    func generateViewModels(question: Question) {
+    func generateViewModels(question: Question)-> [ReusableTableViewCellViewModelType]? {
         
+        var viewModels = [ReusableTableViewCellViewModelType]()
+        
+        viewModels.append(QuestionTableViewCellViewModel(question: question.question))
+     
         switch question.questionType.type {
             
         case .numberRange:
-            viewModels.append(QuestionTableViewCellViewModel(question: question.question))
-            guard let range = question.questionType.condition?.subQuestion.questionType.range else {return}
-            let models = addRanges(range: range)
-            viewModels.append(contentsOf: models)
+            let range = question.questionType.range
+            addRanges(viewModels: &viewModels, range: range)
+           
         default:
-            viewModels.removeAll()
-            viewModels.append(QuestionTableViewCellViewModel(question: question.question))
-            guard let models = addOptions(options: question.questionType.options) else { return }
-             viewModels.append(contentsOf: models)
+            guard let options = question.questionType.options else {return nil}
+            addOptions(viewModels: &viewModels, options: options)
         }
+
+        return viewModels
     }
     
-    func addOptions(options: [String]) -> ([AnswerTableViewCellViewModel<Any>]?) {
-        return  options.map{ AnswerTableViewCellViewModel(answer: $0) }
+    func addOptions( viewModels : inout [ReusableTableViewCellViewModelType], options: [String]) {
+        _ = options.map{ viewModels.append(AnswerTableViewCellViewModel.init(answer: $0)) }
     }
-    
     /// create  array of answers for the givent subquestion
-    func addRanges(range : Range) -> ([AnswerTableViewCellViewModel<Any>]) {
-    
-        let ranges = getArrayFor(range: range)
-        
-        return  ranges.map{ AnswerTableViewCellViewModel(answer: $0) }
+    func addRanges( viewModels : inout [ReusableTableViewCellViewModelType], range : Range?) {
+        guard let unwrapedRange = range else {return}
+        let ranges = getArrayFor(range: unwrapedRange)
+        _ = ranges.map{ viewModels.append(AnswerTableViewCellViewModel.init(answer: $0)) }
     }
     
     /// create an array of ranges of provide from & to
@@ -80,53 +84,116 @@ class PersonalityTestViewModel : PersonalityTestViewModelType  {
         }
         return models
     }
+    
+    /// Handling of api response
+    
+    func handleApiRespose(test : PersonalityTest) -> [[ReusableTableViewCellViewModelType]] {
+        self.personalityTest = test
+        
+        createQuestionArray(questions: test.questions)
+        return viewModelsArray
+    }
+    
+    func createQuestionArray(questions : [Question]){
+        _ =  questions.map{ viewModelsArray.append(generateViewModels(question: $0)!) }
+    }
+    
+    func addConditionalSubQuestion(condition : Condition) {
+        let models = self.viewModelsArray[currentIndex]
+        guard let questionViewModelType = models[0] as? QuestionTableViewCellViewModelType else {return}
+        if condition.predicate.exactEquals[1] == answersDictionary[questionViewModelType.outputs.text()] {
+            guard let model = generateViewModels(question: condition.subQuestion) else {return}
+            viewModelsArray.insert(model, at: currentIndex + 1)
+        }else {
+            parentIndex += 1
+        }
+    }
+    
+    func checkForConditionalQuestionType(question : Question) {
+        switch question.questionType.type {
+        case .conditional:
+            guard let condition = question.questionType.condition else {return}
+            addConditionalSubQuestion(condition: condition)
+        default:
+            parentIndex += 1
+            break
+        }
+    }
 }
 
 //MARk: PersonalityTestViewModelOutputs
 extension PersonalityTestViewModel:PersonalityTestViewModelOutput {
+    func title() -> String {
+        if personalityTest == nil {
+            return "Personality test loading..."
+        }
+        if currentIndex == self.personalityTest.questions.count {
+            return self.personalityTest.questions[currentIndex - 1].category
+        }
+        return viewModelsArray.count > currentIndex  ? self.personalityTest.questions[currentIndex].category : "Test Ended"
+    }
+    
+    func numberOfRows() -> Int {
+        return viewModelsArray.count > 0 ? viewModelsArray[currentIndex].count : 0
+    }
     
     func viewModel(for indexPath: IndexPath) -> ReusableTableViewCellViewModelType {
-        return viewModels[indexPath.row]
+        return viewModelsArray[currentIndex][indexPath.row]
     }
     
 }
 
 //MARk: PersonalityTestViewModelInputs
 extension PersonalityTestViewModel:PersonalityTestViewModelInput {
-    
-    func start() {
-           generateViewModels(question: test.questions[currentIndex])
-    }
-    
-    func title() -> String {
-        return test.questions[currentIndex].category
-    }
-    
-    func numberOfRows() -> Int {
-        return viewModels.count
+    func fetchTest(completion: @escaping (AppError?)->()) {
+//        repository.getPersonalityTest {[weak self] (test, serverError) in
+//            guard let self = self else {return}
+//
+//            var error : AppError? = nil
+//            defer {
+//                completion(error)
+//            }
+//
+//            if error == nil {
+//                guard let testFromServer = test else {return}
+//                self.handleApiRespose(test: testFromServer)
+//            }else {
+//                error = serverError
+//            }
+//        }
+        
+        /// For mocking
+        completion(nil)
+        _ = handleApiRespose(test: repository.mockData())
     }
     
     func nextQuestion(completion: @escaping (TestStatus) -> ()) {
-        if currentIndex >= test.questions.count - 1 { completion(.end); return }
-        currentIndex += 1
-        generateViewModels(question: test.questions[currentIndex])
-        completion(.next)
-    }
-    
-    func previousQuestion(completion: @escaping (TestStatus) -> ()) {
-        if currentIndex < 1  {
-            completion(.start)
+        
+        var status: TestStatus!
+        defer {
+            currentIndex += 1
+            completion (status)
+        }
+        
+        checkForConditionalQuestionType(question: personalityTest.questions[parentIndex])
+        if currentIndex >= viewModelsArray.count - 1{
+            status = .end
             return
         }
-        currentIndex -= 1
-        generateViewModels(question: test.questions[currentIndex])
-        let status =  currentIndex == 0 ? TestStatus.start : TestStatus.previous
-        completion(status)
+        status = .next
+    }
+
+    func rowSelected(at indexPath: IndexPath, compeletion : @escaping ()->())  {
+        let models = self.viewModelsArray[currentIndex]
+        guard let questionViewModelType = models[0] as? QuestionTableViewCellViewModelType else {return}
+        guard let answerViewModelType = models[indexPath.row] as? AnswerTableViewCellViewModelType else {return}
+        self.answersDictionary[questionViewModelType.outputs.text()] = answerViewModelType.outputs.text()
+        answerViewModelType.inputs.setSelectedIndex(index: indexPath.row)
+        compeletion()
     }
     
-    func rowSelected(at indexPath: IndexPath, compeletion : @escaping (TestStatus)->())  {
-        
-        compeletion(.next)
+    func testCompleted() {
+        coordinator.compeltionScene()
     }
     
 }

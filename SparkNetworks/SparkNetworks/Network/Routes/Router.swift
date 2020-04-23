@@ -9,14 +9,14 @@
 import Foundation
 
 struct ProductionServer {
-    static var host = "api.deezer.com"
+    static var host = "c312fba5-2273-499b-ab67-45f000758df5.mock.pstmn.io"
 }
 public protocol URLRequestConvertible {
     func urlRequest()  -> URLRequest?
 }
-enum Router<T>: URLRequestConvertible {
+enum Router: URLRequestConvertible {
     
-    case getTest(T)
+    case getTest
     
    private var scheme: String {
         switch self {
@@ -32,8 +32,8 @@ enum Router<T>: URLRequestConvertible {
     }
     private var path: String {
         switch self {
-        case .getTest(_):
-            return  "test json path"
+        case .getTest:
+            return  "/personality-test/"
         }
     }
    private var method: String {
@@ -51,7 +51,6 @@ enum Router<T>: URLRequestConvertible {
         }
     }
     func urlRequest() -> URLRequest? {
-        
         
         var components = URLComponents()
         components.queryItems = queryParameters

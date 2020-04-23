@@ -9,9 +9,22 @@
 import Foundation
 
 class PersonalityTestRepository: BaseRepository {
+    
+    func getPersonalityTest(completion: @escaping(PersonalityTest?,AppError?) -> Void)  {
+         personalityTestService.personalityTest { result in
 
-    func getPersonalityTestQuestions() -> PersonalityTest {
+            switch result{
+
+            case .failure(let error):
+                completion(nil,error)
+
+            case .success(let test):
+                completion(test, nil)
+            }
+        }
+    }
+    
+    func mockData() -> PersonalityTest {
         return PersonalityTest.mocked
-       // return personalityTestService.personalityTestQuestions()
     }
 }

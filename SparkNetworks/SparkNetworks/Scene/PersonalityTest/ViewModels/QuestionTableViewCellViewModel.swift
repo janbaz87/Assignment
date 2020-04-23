@@ -9,10 +9,11 @@
 import Foundation
 
 protocol QuestionTableViewCellViewModelInputs {
-    
+   
 }
 protocol QuestionTableViewCellViewModelOutputs {
     func text() -> String
+    
 }
 protocol QuestionTableViewCellViewModelType {
     var inputs : QuestionTableViewCellViewModelInputs { get }
@@ -27,7 +28,8 @@ class QuestionTableViewCellViewModel: ReusableTableViewCellViewModelType, Questi
     //MARK: Properties
     var reusableIdentifier: String {return QuestionTableViewCell.reuseIdentifier }
     //MARK: Properties
-    let question: String
+    private let question: String
+    
     
     //MARK: Init
     init(question: String) {
@@ -37,6 +39,7 @@ class QuestionTableViewCellViewModel: ReusableTableViewCellViewModelType, Questi
 }
 
 extension QuestionTableViewCellViewModel: QuestionTableViewCellViewModelOutputs {
+   
     
     func text() -> String {
         return question

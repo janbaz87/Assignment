@@ -20,12 +20,23 @@ class PersonalityTestCoordinator: BaseCoordinator<Void> {
     
     override func start() {
         let viewController = PersonalityTestViewController.initFromStoryboard()
-        let viewModel = PersonalityTestViewModel()
+        let viewModel = PersonalityTestViewModel(coordinator: self)
         viewController.viewModel = viewModel
         
         rootViewController = viewController
         navigationController = UINavigationController(rootViewController: viewController)
         self.window?.rootViewController = navigationController
         self.window?.makeKeyAndVisible()
+    }
+}
+
+extension PersonalityTestCoordinator {
+    func compeltionScene() {
+        DispatchQueue.main.async {
+            let viewController = CompletionViewController.initFromStoryboard()
+            let viewModel = CompletionViewModel(coordinator: self)
+            viewController.viewModel = viewModel
+            self.navigationController.pushViewController(viewController, animated: true)
+        }
     }
 }

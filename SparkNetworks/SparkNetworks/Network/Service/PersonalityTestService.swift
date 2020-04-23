@@ -9,11 +9,22 @@
 import Foundation
 
 class PersonalityTestService {
+    private let apiConvertible:ApiService = APIClient()
+    
     init() {
         
     }
+    func personalityTest(completion: @escaping(Result<PersonalityTest?,AppError>) -> Void) {
     
-    func personalityTestQuestions() -> PersonalityTest {
-        return PersonalityTest.mocked
+        let router = Router.getTest
+        apiConvertible.performRequest(router: router) { (result:Result<PersonalityTest, AppError>) in
+            
+            switch result{
+            case .failure(let error):
+                completion(.failure(error))
+            case .success(let data):
+                completion(.success(data))
+            }
+        }
     }
 }

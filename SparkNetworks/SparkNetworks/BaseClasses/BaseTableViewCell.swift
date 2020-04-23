@@ -22,17 +22,20 @@ extension ReusableView where Self: UIView {
 protocol ConfigurableTableViewCell {
     func configure(with viewModel: Any)
     func setIndexPath(_ indexPath: IndexPath)
+    func isSelected(_ isSelected: Bool)
 }
 
 //MARk: Base tableview cell
 class BaseTableViewCell: UITableViewCell, ReusableView, ConfigurableTableViewCell, DequeueInitializable {
     var indexPath: IndexPath!
-    
     func configure(with viewModel: Any) {
          fatalError("Configure with viewModel must be implemented.")
     }
     
     func setIndexPath(_ indexPath: IndexPath) {
         self.indexPath = indexPath
+    }
+    func isSelected(_ isSelected: Bool) {
+        self.isSelected = isSelected
     }
 }

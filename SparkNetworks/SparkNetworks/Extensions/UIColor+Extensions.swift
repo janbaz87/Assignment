@@ -11,6 +11,9 @@ import UIKit
 public enum AppColorType {
     case black_white
     case offwhite_darkgray
+    case blue_white
+    case blue_grey
+    case grey_grey
 
 }
 
@@ -20,7 +23,9 @@ public extension UIColor {
         switch (colorType) {
         case (.black_white):                  return appColor(named: "black_white")!
         case (.offwhite_darkgray):            return appColor(named: "offwhite_darkgray")!
-        
+        case (.blue_white):                   return appColor(named: "blue_white")!
+        case (.blue_grey):                    return appColor(named: "blue_grey")!
+        case (.grey_grey):                    return appColor(named: "grey_grey")!
         }
     }
     
@@ -30,6 +35,18 @@ public extension UIColor {
     
     static var offwhite_darkgray: UIColor {
         return appColor(ofType: .offwhite_darkgray)
+    }
+    
+    static var blue_white: UIColor {
+        return appColor(ofType: .blue_white)
+    }
+    
+    static var blue_grey: UIColor {
+        return appColor(ofType: .blue_grey)
+    }
+    
+    static var grey_grey: UIColor {
+        return appColor(ofType: .grey_grey)
     }
 
 }
