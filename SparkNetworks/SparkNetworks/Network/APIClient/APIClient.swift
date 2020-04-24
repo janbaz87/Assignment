@@ -8,12 +8,12 @@
 
 import Foundation
 public protocol ApiService {
-    func performRequest<T:Codable>(router: URLRequestConvertible, completionHandler: @escaping (Result<T,AppError>) -> Void)
+    func performRequest<T:Decodable>(router: URLRequestConvertible, completionHandler: @escaping (Result<T,AppError>) -> Void)
 }
 
 public class APIClient {
     private let session = URLSession(configuration: .default)
-    private func fetchFeed(request : URLRequest?, completion:@escaping (Result<Data,AppError>) -> Void) {
+    private func fetchData(request : URLRequest?, completion:@escaping (Result<Data,AppError>) -> Void) {
         
         guard let url = request?.url else {
             let error = AppError.init(error: "Not a valid Url")
@@ -23,6 +23,14 @@ public class APIClient {
         
        let task = session.dataTask(with: URLRequest(url: url)) { data, response, error in
                   if let data = data {
+                    do{
+                         //here dataResponse received from a network request
+                         let jsonResponse = try JSONSerialization.jsonObject(with:
+                                                data , options: [])
+                         print("---Json serilization responce : ---", jsonResponse) //Response result
+                      } catch let parsingError {
+                         print("Error", parsingError)
+                    }
                       completion(.success(data))
                   } else if let error = error {
                     completion(.failure(AppError.init(error: error.localizedDescription)))
@@ -33,11 +41,12 @@ public class APIClient {
     }
 }
 extension APIClient:ApiService {
-    public func performRequest<T:Codable>(router: URLRequestConvertible, completionHandler: @escaping (Result<T,AppError>) -> Void) {
+    public func performRequest<T:Decodable>(router: URLRequestConvertible, completionHandler: @escaping (Result<T,AppError>) -> Void) {
         
-        self.fetchFeed(request: router.urlRequest()) { result in
+        self.fetchData(request: router.urlRequest()) { result in
                           switch result {
                           case .success(let data):
+            
                               do {
                                 let decode = try JSONDecoder().decode(T.self, from: data)
                                   completionHandler(.success(decode))

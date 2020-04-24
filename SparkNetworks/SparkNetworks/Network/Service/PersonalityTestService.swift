@@ -16,7 +16,7 @@ class PersonalityTestService {
     }
     func personalityTest(completion: @escaping(Result<PersonalityTest?,AppError>) -> Void) {
     
-        let router = Router.getTest
+        let router = Router.getTest(GeneralGetRequest())
         apiConvertible.performRequest(router: router) { (result:Result<PersonalityTest, AppError>) in
             
             switch result{
@@ -26,5 +26,16 @@ class PersonalityTestService {
                 completion(.success(data))
             }
         }
+    }
+}
+
+extension Dictionary {
+    var jsonStringRepresentation: String? {
+        guard let theJSONData = try? JSONSerialization.data(withJSONObject: self,
+                                                            options: [.prettyPrinted]) else {
+            return nil
+        }
+
+        return String(data: theJSONData, encoding: .utf8)
     }
 }

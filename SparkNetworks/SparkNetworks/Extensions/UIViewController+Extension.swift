@@ -9,11 +9,13 @@
 import UIKit
 extension UIViewController{
     func showError(error: AppError, errorTitle: String="Error", cancelTitle: String="OK") {
-        let controller = UIAlertController.init(title: errorTitle, message: error.error, preferredStyle: UIAlertController.Style.alert)
-        let cancel = UIAlertAction.init(title: cancelTitle, style: .cancel) { (action) in
+        DispatchQueue.main.async {
+             let controller = UIAlertController.init(title: errorTitle, message: error.error, preferredStyle: UIAlertController.Style.alert)
+                   let cancel = UIAlertAction.init(title: cancelTitle, style: .cancel) { (action) in
+                   }
+                   controller.addAction(cancel)
+                   self.present(controller, animated: true, completion: nil)
         }
-        controller.addAction(cancel)
-        self.present(controller, animated: true, completion: nil)
     }
 }
     

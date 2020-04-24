@@ -37,7 +37,6 @@ class PersonalityTestViewController: UIViewController,StoryboardInitializable {
     
     private func render() {
         nextButton.roundCorners(with: 8)
-        reload(with: .none)
     }
     
     private func reload(with animation : UITableView.RowAnimation) {
