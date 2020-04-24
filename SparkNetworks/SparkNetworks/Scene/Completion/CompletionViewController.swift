@@ -23,6 +23,7 @@ class CompletionViewController: UIViewController,StoryboardInitializable {
     }
 
     func render() {
+        navigationItem.hidesBackButton = true
         self.title = viewModel.outputs.title()
         messageLabel.text = viewModel.outputs.successMessage()
     }

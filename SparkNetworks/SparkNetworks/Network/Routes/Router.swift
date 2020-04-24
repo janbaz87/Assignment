@@ -14,19 +14,20 @@ struct ProductionServer {
 public protocol URLRequestConvertible {
     func urlRequest()  -> URLRequest?
 }
-enum Router: URLRequestConvertible {
+
+enum Router <T>: URLRequestConvertible where T: Codable{
     
-    case getTest
+    case getTest(T)
     
    private var scheme: String {
         switch self {
-        case .getTest:
+        default:
             return "https"
         }
     }
    private var host: String {
         switch self {
-        case .getTest:
+        default:
             return ProductionServer.host
         }
     }
@@ -34,12 +35,14 @@ enum Router: URLRequestConvertible {
         switch self {
         case .getTest:
             return  "/personality-test/"
+        
         }
     }
-   private var method: String {
+   private var method: MTHTTPMethod {
         switch self {
         case .getTest:
-            return "GET"
+            return .get
+        
         }
     }
    
@@ -50,6 +53,15 @@ enum Router: URLRequestConvertible {
             return nil
         }
     }
+    
+    private var input : T? {
+        switch self {
+        
+        default:
+            return nil
+        }
+    }
+    
     func urlRequest() -> URLRequest? {
         
         var components = URLComponents()
@@ -63,9 +75,24 @@ enum Router: URLRequestConvertible {
             assert(true,"url not formed")
             return nil
         }
+        
         var urlRequest = URLRequest(url: url)
-        urlRequest.httpMethod = self.method
+        urlRequest.httpMethod = self.method.rawValue
+        urlRequest.setValue(ContentType.json.rawValue, forHTTPHeaderField: HTTPHeaderField.contentType.rawValue)
+        
+        if let parameters = input {
+            urlRequest.httpBody = Data()
+            do {
+                let encoder = JSONEncoder()
+                encoder.dateEncodingStrategy = .millisecondsSince1970
+                urlRequest.httpBody = try encoder.encode(parameters)
+            } catch {
+                return nil
+            }
+        }
         
         return urlRequest
     }
 }
+
+

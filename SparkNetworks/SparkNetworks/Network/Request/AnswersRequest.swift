@@ -8,6 +8,9 @@
 
 import Foundation
 
-struct PersonalityTestRequest: Codable {
-    let textId : Int
+struct GeneralGetRequest: Codable {
+    
 }
+
+
+

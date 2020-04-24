@@ -14,6 +14,7 @@ class BaseRepository {
     public lazy var personalityTestService: PersonalityTestService = {
            return PersonalityTestService()
     }()
+    
 }
 
 

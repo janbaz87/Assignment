@@ -37,7 +37,7 @@ class PersonalityTestViewModel : PersonalityTestViewModelType  {
     var viewModelsArray = [[ReusableTableViewCellViewModelType]]()
     private var currentIndex = 0
     private var parentIndex = 0
-    private var answersDictionary = [String : String]()
+    private var answersDictionary = Dictionary<String, String>()
     private var coordinator : PersonalityTestCoordinator
     
     //MARK: Init
@@ -146,25 +146,25 @@ extension PersonalityTestViewModel:PersonalityTestViewModelOutput {
 //MARk: PersonalityTestViewModelInputs
 extension PersonalityTestViewModel:PersonalityTestViewModelInput {
     func fetchTest(completion: @escaping (AppError?)->()) {
-//        repository.getPersonalityTest {[weak self] (test, serverError) in
-//            guard let self = self else {return}
-//
-//            var error : AppError? = nil
-//            defer {
-//                completion(error)
-//            }
-//
-//            if error == nil {
-//                guard let testFromServer = test else {return}
-//                self.handleApiRespose(test: testFromServer)
-//            }else {
-//                error = serverError
-//            }
-//        }
+        repository.getPersonalityTest {[weak self] (test, serverError) in
+            guard let self = self else {return}
+
+            var error : AppError? = nil
+            defer {
+                completion(error)
+            }
+
+            if error == nil {
+                guard let testFromServer = test else {return}
+                _ = self.handleApiRespose(test: testFromServer)
+            }else {
+                error = serverError
+            }
+        }
         
         /// For mocking
-        completion(nil)
-        _ = handleApiRespose(test: repository.mockData())
+//        completion(nil)
+//        _ = handleApiRespose(test: repository.mockData())
     }
     
     func nextQuestion(completion: @escaping (TestStatus) -> ()) {
@@ -184,16 +184,24 @@ extension PersonalityTestViewModel:PersonalityTestViewModelInput {
     }
 
     func rowSelected(at indexPath: IndexPath, compeletion : @escaping ()->())  {
+        defer {
+             compeletion()
+        }
+        if currentIndex > self.viewModelsArray.count - 1 {
+            return
+        }
         let models = self.viewModelsArray[currentIndex]
         guard let questionViewModelType = models[0] as? QuestionTableViewCellViewModelType else {return}
         guard let answerViewModelType = models[indexPath.row] as? AnswerTableViewCellViewModelType else {return}
         self.answersDictionary[questionViewModelType.outputs.text()] = answerViewModelType.outputs.text()
         answerViewModelType.inputs.setSelectedIndex(index: indexPath.row)
-        compeletion()
+       
     }
     
     func testCompleted() {
-        coordinator.compeltionScene()
+    
+        self.coordinator.compeltionScene()
+           
     }
     
 }

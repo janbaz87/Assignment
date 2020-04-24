@@ -10,24 +10,20 @@ import Foundation
 
 protocol TestConvertible {}
 
-enum TestStatus {
-    case start
-    case end
-    case next
-}
 
-enum Type : String, Codable {
+
+enum Type : String, Decodable {
     case single = "single_choice"
     case conditional = "single_choice_conditional"
     case numberRange = "number_range"
 }
 
-struct PersonalityTest: Codable, TestConvertible {
+struct PersonalityTest: Decodable, TestConvertible {
     let categories: [String]
     var questions: [Question]
 }
 
-class Question: Codable {
+class Question: Decodable {
     var question: String
     var category: String
     var questionType: QuestionType
@@ -44,14 +40,14 @@ class Question: Codable {
     }
 }
 
-struct QuestionType: Codable {
+struct QuestionType: Decodable {
     let type: Type
     let options: [String]?
     let range: Range?
     let condition: Condition?
 }
 
-struct Condition: Codable {
+struct Condition: Decodable {
     let predicate: Predicate
     let subQuestion: Question
     
@@ -61,11 +57,11 @@ struct Condition: Codable {
     }
 }
 
-struct Predicate: Codable {
+struct Predicate: Decodable {
     let exactEquals : [String]
 }
 
-struct Range: Codable {
+struct Range: Decodable {
     let from: Int
     let to: Int
 }
