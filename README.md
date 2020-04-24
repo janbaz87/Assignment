@@ -15,3 +15,7 @@ This test project is written in easily-extendable architecture (MVVM-Coordinator
 * Supports iPhone and iPad using size classes
 * Supports dark Mode and light mode
 * Codables , Result types  and other Protocol oriented approach with Interface segregation and Single responsibility’s 
+* Using postman server for fetching personality test data.
+
+
+### Thank You ###
