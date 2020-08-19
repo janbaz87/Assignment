@@ -43,6 +43,10 @@
 		DF622D4C2451DC1100E1F53E /* CompletionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF622D4B2451DC1100E1F53E /* CompletionViewController.swift */; };
 		DF622D4E2452060500E1F53E /* CompletionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF622D4D2452060500E1F53E /* CompletionViewModel.swift */; };
 		DF622D51245223A500E1F53E /* PersonalityTestViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF622D50245223A500E1F53E /* PersonalityTestViewModelTests.swift */; };
+		DF7CD6132464187500242B7A /* TextAnswerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF7CD6112464187500242B7A /* TextAnswerTableViewCell.swift */; };
+		DF7CD6142464187500242B7A /* TextAnswerTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF7CD6122464187500242B7A /* TextAnswerTableViewCell.xib */; };
+		DF7CD6162464194700242B7A /* TextAnswerTableViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF7CD6152464194700242B7A /* TextAnswerTableViewCellViewModel.swift */; };
+		DF7CD61B2464260C00242B7A /* TextAnswerTableViewCellViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF7CD618246423C500242B7A /* TextAnswerTableViewCellViewModelTests.swift */; };
 		DFDD23972452DA050065A6AE /* AnswersSubmitted.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFDD23962452DA050065A6AE /* AnswersSubmitted.swift */; };
 		DFDD23992452F0F50065A6AE /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFDD23982452F0F50065A6AE /* Enums.swift */; };
 		DFE72B5B244E270200C2D7D4 /* PersonalityTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFE72B5A244E270200C2D7D4 /* PersonalityTest.swift */; };
@@ -99,6 +103,10 @@
 		DF622D4B2451DC1100E1F53E /* CompletionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompletionViewController.swift; sourceTree = "<group>"; };
 		DF622D4D2452060500E1F53E /* CompletionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompletionViewModel.swift; sourceTree = "<group>"; };
 		DF622D50245223A500E1F53E /* PersonalityTestViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalityTestViewModelTests.swift; sourceTree = "<group>"; };
+		DF7CD6112464187500242B7A /* TextAnswerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextAnswerTableViewCell.swift; sourceTree = "<group>"; };
+		DF7CD6122464187500242B7A /* TextAnswerTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TextAnswerTableViewCell.xib; sourceTree = "<group>"; };
+		DF7CD6152464194700242B7A /* TextAnswerTableViewCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextAnswerTableViewCellViewModel.swift; sourceTree = "<group>"; };
+		DF7CD618246423C500242B7A /* TextAnswerTableViewCellViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextAnswerTableViewCellViewModelTests.swift; sourceTree = "<group>"; };
 		DFDD23962452DA050065A6AE /* AnswersSubmitted.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswersSubmitted.swift; sourceTree = "<group>"; };
 		DFDD23982452F0F50065A6AE /* Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
 		DFE72B5A244E270200C2D7D4 /* PersonalityTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalityTest.swift; sourceTree = "<group>"; };
@@ -194,6 +202,7 @@
 		DF587C03244AFC3200468A11 /* SparkNetworksTests */ = {
 			isa = PBXGroup;
 			children = (
+				DF7CD6172464238700242B7A /* TableViewCellViewModels */,
 				DF622D4F2452238100E1F53E /* ViewModels */,
 				DF587C04244AFC3200468A11 /* SparkNetworksTests.swift */,
 				DF587C06244AFC3200468A11 /* Info.plist */,
@@ -305,6 +314,8 @@
 				DF587C43244CD36200468A11 /* QuestionTableViewCell.xib */,
 				DF587C49244CD9F300468A11 /* AnswerTableViewCell.swift */,
 				DF587C4A244CD9F300468A11 /* AnswerTableViewCell.xib */,
+				DF7CD6112464187500242B7A /* TextAnswerTableViewCell.swift */,
+				DF7CD6122464187500242B7A /* TextAnswerTableViewCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -314,6 +325,7 @@
 			children = (
 				DF587C47244CD53C00468A11 /* QuestionTableViewCellViewModel.swift */,
 				DF587C4D244CDA1500468A11 /* AnswerTableViewCellViewModel.swift */,
+				DF7CD6152464194700242B7A /* TextAnswerTableViewCellViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -352,6 +364,14 @@
 				DF622D50245223A500E1F53E /* PersonalityTestViewModelTests.swift */,
 			);
 			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		DF7CD6172464238700242B7A /* TableViewCellViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				DF7CD618246423C500242B7A /* TextAnswerTableViewCellViewModelTests.swift */,
+			);
+			path = TableViewCellViewModels;
 			sourceTree = "<group>";
 		};
 		DFE72B59244E26D600C2D7D4 /* Models */ = {
@@ -449,6 +469,7 @@
 				DF587BF7244AFC3200468A11 /* Assets.xcassets in Resources */,
 				DF587C4C244CD9F300468A11 /* AnswerTableViewCell.xib in Resources */,
 				DF587C45244CD36200468A11 /* QuestionTableViewCell.xib in Resources */,
+				DF7CD6142464187500242B7A /* TextAnswerTableViewCell.xib in Resources */,
 				DF587BF5244AFC3000468A11 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -483,10 +504,12 @@
 				DF587C4E244CDA1500468A11 /* AnswerTableViewCellViewModel.swift in Sources */,
 				DFDD23992452F0F50065A6AE /* Enums.swift in Sources */,
 				DF26BD18244DA30E00C9D9F8 /* APIClient.swift in Sources */,
+				DF7CD6132464187500242B7A /* TextAnswerTableViewCell.swift in Sources */,
 				DF587C48244CD53C00468A11 /* QuestionTableViewCellViewModel.swift in Sources */,
 				DF587C36244B8FEE00468A11 /* StoryboardInitializable.swift in Sources */,
 				DF587C28244B796500468A11 /* ThemeManager.swift in Sources */,
 				DF587C2B244B79BD00468A11 /* UIColor+Extensions.swift in Sources */,
+				DF7CD6162464194700242B7A /* TextAnswerTableViewCellViewModel.swift in Sources */,
 				DF26BD15244D9CF100C9D9F8 /* Router.swift in Sources */,
 				DFE72B5B244E270200C2D7D4 /* PersonalityTest.swift in Sources */,
 				DF587C31244B8F1A00468A11 /* AppCoordinator.swift in Sources */,
@@ -506,6 +529,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DF587C05244AFC3200468A11 /* SparkNetworksTests.swift in Sources */,
+				DF7CD61B2464260C00242B7A /* TextAnswerTableViewCellViewModelTests.swift in Sources */,
 				DF622D51245223A500E1F53E /* PersonalityTestViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

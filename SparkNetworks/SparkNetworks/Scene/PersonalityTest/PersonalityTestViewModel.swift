@@ -53,6 +53,9 @@ class PersonalityTestViewModel : PersonalityTestViewModelType  {
      
         switch question.questionType.type {
             
+        case .text:
+            addTextAnswer(viewModels: &viewModels)
+            
         case .numberRange:
             let range = question.questionType.range
             addRanges(viewModels: &viewModels, range: range)
@@ -63,6 +66,11 @@ class PersonalityTestViewModel : PersonalityTestViewModelType  {
         }
 
         return viewModels
+    }
+    /// this method will add viewmodel for text type answers
+    func addTextAnswer( viewModels : inout [ReusableTableViewCellViewModelType]) {
+        let viewmodel = TextAnswerTableViewCellViewModel.init()
+        viewModels.append(viewmodel)
     }
     
     func addOptions( viewModels : inout [ReusableTableViewCellViewModelType], options: [String]) {

@@ -8,17 +8,16 @@
 
 import Foundation
 
-protocol TestConvertible {}
-
 
 
 enum Type : String, Decodable {
     case single = "single_choice"
     case conditional = "single_choice_conditional"
     case numberRange = "number_range"
+    case text = "text_answer"
 }
 
-struct PersonalityTest: Decodable, TestConvertible {
+struct PersonalityTest: Decodable {
     let categories: [String]
     var questions: [Question]
 }
@@ -72,7 +71,7 @@ struct Range: Decodable {
 extension PersonalityTest {
     static var mocked : PersonalityTest {
         /// we can return mock data from here
-        return PersonalityTest.init(categories: ["hard_facr","passion"], questions: [Question.mockedConditional])
+        return PersonalityTest.init(categories: ["hard_facr","passion"], questions: [Question.mockedText])
          
     }
 }
@@ -86,6 +85,10 @@ extension Question {
     static var mockedRange : Question {
         return Question.init(question: "What is you age?", category: "hard_fact", questionType: QuestionType.mockedRange)
     }
+    
+    static var mockedText : Question {
+         return Question.init(question: "What is you age?", category: "hard_fact", questionType: QuestionType.mockedText)
+    }
 }
 
 extension QuestionType {
@@ -95,6 +98,10 @@ extension QuestionType {
     
     static var mockedRange : QuestionType {
         return QuestionType.init(type: .numberRange, options: nil , range: Range.mocked, condition: nil)
+    }
+    
+    static var mockedText : QuestionType {
+        return QuestionType.init(type: .text, options: nil , range: Range.mocked, condition: nil)
     }
 }
 

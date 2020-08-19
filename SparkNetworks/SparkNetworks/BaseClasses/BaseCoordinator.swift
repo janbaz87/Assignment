@@ -40,6 +40,7 @@ class BaseCoordinator<ResultType> {
         
     }
 }
+
 extension BaseCoordinator {
     func showError(error: AppError) {
         if let controller = rootViewController{

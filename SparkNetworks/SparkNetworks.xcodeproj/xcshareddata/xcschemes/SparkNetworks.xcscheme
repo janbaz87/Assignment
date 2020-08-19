@@ -29,6 +29,16 @@
       shouldUseLaunchSchemeArgsEnv = "YES"
       codeCoverageEnabled = "YES">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "DF587BFF244AFC3200468A11"
+               BuildableName = "SparkNetworksTests.xctest"
+               BlueprintName = "SparkNetworksTests"
+               ReferencedContainer = "container:SparkNetworks.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction

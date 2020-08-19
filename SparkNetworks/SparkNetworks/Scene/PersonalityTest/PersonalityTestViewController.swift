@@ -33,6 +33,7 @@ class PersonalityTestViewController: UIViewController,StoryboardInitializable {
     private func registerXibs() {
         QuestionTableViewCell.register(tableView: tableView)
         AnswerTableViewCell.register(tableView: tableView)
+        TextAnswerTableViewCell.register(tableView: tableView)
     }
     
     private func render() {
