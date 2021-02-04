@@ -17,5 +17,7 @@ This test project is written in easily-extendable architecture (MVVM-Coordinator
 * Codables , Result types  and other Protocol oriented approach with Interface segregation and Single responsibility’s 
 * Using postman server for fetching personality test data.
 
+### Note ###
+NO emphasis on UI in this assignment.
 
 ### Thank You ###
