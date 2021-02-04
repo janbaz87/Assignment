@@ -19,7 +19,6 @@
 		DF587BF5244AFC3000468A11 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF587BF3244AFC3000468A11 /* Main.storyboard */; };
 		DF587BF7244AFC3200468A11 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DF587BF6244AFC3200468A11 /* Assets.xcassets */; };
 		DF587BFA244AFC3200468A11 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF587BF8244AFC3200468A11 /* LaunchScreen.storyboard */; };
-		DF587C05244AFC3200468A11 /* SparkNetworksTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF587C04244AFC3200468A11 /* SparkNetworksTests.swift */; };
 		DF587C23244B094100468A11 /* BaseCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF587C22244B094100468A11 /* BaseCoordinator.swift */; };
 		DF587C26244B793F00468A11 /* AppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF587C25244B793F00468A11 /* AppError.swift */; };
 		DF587C28244B796500468A11 /* ThemeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF587C27244B796500468A11 /* ThemeManager.swift */; };
@@ -47,6 +46,7 @@
 		DF7CD6142464187500242B7A /* TextAnswerTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF7CD6122464187500242B7A /* TextAnswerTableViewCell.xib */; };
 		DF7CD6162464194700242B7A /* TextAnswerTableViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF7CD6152464194700242B7A /* TextAnswerTableViewCellViewModel.swift */; };
 		DF7CD61B2464260C00242B7A /* TextAnswerTableViewCellViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF7CD618246423C500242B7A /* TextAnswerTableViewCellViewModelTests.swift */; };
+		DFC1FA1225CC779B00B2AB9D /* AssignmentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC1FA1125CC779B00B2AB9D /* AssignmentTests.swift */; };
 		DFDD23972452DA050065A6AE /* AnswersSubmitted.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFDD23962452DA050065A6AE /* AnswersSubmitted.swift */; };
 		DFDD23992452F0F50065A6AE /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFDD23982452F0F50065A6AE /* Enums.swift */; };
 		DFE72B5B244E270200C2D7D4 /* PersonalityTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFE72B5A244E270200C2D7D4 /* PersonalityTest.swift */; };
@@ -69,7 +69,7 @@
 		DF1E9526244F6E6E007B3878 /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
 		DF26BD14244D9CF100C9D9F8 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		DF26BD17244DA30E00C9D9F8 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
-		DF587BEA244AFC3000468A11 /* SparkNetworks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SparkNetworks.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DF587BEA244AFC3000468A11 /* Assignment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Assignment.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF587BED244AFC3000468A11 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DF587BEF244AFC3000468A11 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		DF587BF1244AFC3000468A11 /* PersonalityTestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalityTestViewController.swift; sourceTree = "<group>"; };
@@ -77,8 +77,7 @@
 		DF587BF6244AFC3200468A11 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DF587BF9244AFC3200468A11 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DF587BFB244AFC3200468A11 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		DF587C00244AFC3200468A11 /* SparkNetworksTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SparkNetworksTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		DF587C04244AFC3200468A11 /* SparkNetworksTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SparkNetworksTests.swift; sourceTree = "<group>"; };
+		DF587C00244AFC3200468A11 /* AssignmentTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AssignmentTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF587C06244AFC3200468A11 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DF587C22244B094100468A11 /* BaseCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCoordinator.swift; sourceTree = "<group>"; };
 		DF587C25244B793F00468A11 /* AppError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppError.swift; sourceTree = "<group>"; };
@@ -107,6 +106,7 @@
 		DF7CD6122464187500242B7A /* TextAnswerTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TextAnswerTableViewCell.xib; sourceTree = "<group>"; };
 		DF7CD6152464194700242B7A /* TextAnswerTableViewCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextAnswerTableViewCellViewModel.swift; sourceTree = "<group>"; };
 		DF7CD618246423C500242B7A /* TextAnswerTableViewCellViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextAnswerTableViewCellViewModelTests.swift; sourceTree = "<group>"; };
+		DFC1FA1125CC779B00B2AB9D /* AssignmentTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssignmentTests.swift; sourceTree = "<group>"; };
 		DFDD23962452DA050065A6AE /* AnswersSubmitted.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswersSubmitted.swift; sourceTree = "<group>"; };
 		DFDD23982452F0F50065A6AE /* Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
 		DFE72B5A244E270200C2D7D4 /* PersonalityTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalityTest.swift; sourceTree = "<group>"; };
@@ -165,8 +165,8 @@
 		DF587BE1244AFC3000468A11 = {
 			isa = PBXGroup;
 			children = (
-				DF587BEC244AFC3000468A11 /* SparkNetworks */,
-				DF587C03244AFC3200468A11 /* SparkNetworksTests */,
+				DF587BEC244AFC3000468A11 /* Assignment */,
+				DF587C03244AFC3200468A11 /* AssignmentTests */,
 				DF587BEB244AFC3000468A11 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -174,13 +174,13 @@
 		DF587BEB244AFC3000468A11 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				DF587BEA244AFC3000468A11 /* SparkNetworks.app */,
-				DF587C00244AFC3200468A11 /* SparkNetworksTests.xctest */,
+				DF587BEA244AFC3000468A11 /* Assignment.app */,
+				DF587C00244AFC3200468A11 /* AssignmentTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		DF587BEC244AFC3000468A11 /* SparkNetworks */ = {
+		DF587BEC244AFC3000468A11 /* Assignment */ = {
 			isa = PBXGroup;
 			children = (
 				DFE72B59244E26D600C2D7D4 /* Models */,
@@ -196,18 +196,18 @@
 				DF587C1E244B038800468A11 /* Resources */,
 				DF587C1D244B036F00468A11 /* Configurations */,
 			);
-			path = SparkNetworks;
+			path = Assignment;
 			sourceTree = "<group>";
 		};
-		DF587C03244AFC3200468A11 /* SparkNetworksTests */ = {
+		DF587C03244AFC3200468A11 /* AssignmentTests */ = {
 			isa = PBXGroup;
 			children = (
 				DF7CD6172464238700242B7A /* TableViewCellViewModels */,
 				DF622D4F2452238100E1F53E /* ViewModels */,
-				DF587C04244AFC3200468A11 /* SparkNetworksTests.swift */,
+				DFC1FA1125CC779B00B2AB9D /* AssignmentTests.swift */,
 				DF587C06244AFC3200468A11 /* Info.plist */,
 			);
-			path = SparkNetworksTests;
+			path = AssignmentTests;
 			sourceTree = "<group>";
 		};
 		DF587C0F244B02D200468A11 /* Application */ = {
@@ -386,9 +386,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		DF587BE9244AFC3000468A11 /* SparkNetworks */ = {
+		DF587BE9244AFC3000468A11 /* Assignment */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = DF587C09244AFC3200468A11 /* Build configuration list for PBXNativeTarget "SparkNetworks" */;
+			buildConfigurationList = DF587C09244AFC3200468A11 /* Build configuration list for PBXNativeTarget "Assignment" */;
 			buildPhases = (
 				DF587BE6244AFC3000468A11 /* Sources */,
 				DF587BE7244AFC3000468A11 /* Frameworks */,
@@ -398,14 +398,14 @@
 			);
 			dependencies = (
 			);
-			name = SparkNetworks;
+			name = Assignment;
 			productName = SparkNetworks;
-			productReference = DF587BEA244AFC3000468A11 /* SparkNetworks.app */;
+			productReference = DF587BEA244AFC3000468A11 /* Assignment.app */;
 			productType = "com.apple.product-type.application";
 		};
-		DF587BFF244AFC3200468A11 /* SparkNetworksTests */ = {
+		DF587BFF244AFC3200468A11 /* AssignmentTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = DF587C0C244AFC3200468A11 /* Build configuration list for PBXNativeTarget "SparkNetworksTests" */;
+			buildConfigurationList = DF587C0C244AFC3200468A11 /* Build configuration list for PBXNativeTarget "AssignmentTests" */;
 			buildPhases = (
 				DF587BFC244AFC3200468A11 /* Sources */,
 				DF587BFD244AFC3200468A11 /* Frameworks */,
@@ -416,9 +416,9 @@
 			dependencies = (
 				DF587C02244AFC3200468A11 /* PBXTargetDependency */,
 			);
-			name = SparkNetworksTests;
+			name = AssignmentTests;
 			productName = SparkNetworksTests;
-			productReference = DF587C00244AFC3200468A11 /* SparkNetworksTests.xctest */;
+			productReference = DF587C00244AFC3200468A11 /* AssignmentTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -440,7 +440,7 @@
 					};
 				};
 			};
-			buildConfigurationList = DF587BE5244AFC3000468A11 /* Build configuration list for PBXProject "SparkNetworks" */;
+			buildConfigurationList = DF587BE5244AFC3000468A11 /* Build configuration list for PBXProject "Assignment" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -453,8 +453,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				DF587BE9244AFC3000468A11 /* SparkNetworks */,
-				DF587BFF244AFC3200468A11 /* SparkNetworksTests */,
+				DF587BE9244AFC3000468A11 /* Assignment */,
+				DF587BFF244AFC3200468A11 /* AssignmentTests */,
 			);
 		};
 /* End PBXProject section */
@@ -528,7 +528,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DF587C05244AFC3200468A11 /* SparkNetworksTests.swift in Sources */,
+				DFC1FA1225CC779B00B2AB9D /* AssignmentTests.swift in Sources */,
 				DF7CD61B2464260C00242B7A /* TextAnswerTableViewCellViewModelTests.swift in Sources */,
 				DF622D51245223A500E1F53E /* PersonalityTestViewModelTests.swift in Sources */,
 			);
@@ -539,7 +539,7 @@
 /* Begin PBXTargetDependency section */
 		DF587C02244AFC3200468A11 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = DF587BE9244AFC3000468A11 /* SparkNetworks */;
+			target = DF587BE9244AFC3000468A11 /* Assignment */;
 			targetProxy = DF587C01244AFC3200468A11 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -684,7 +684,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = LVZF2MY9UJ;
-				INFOPLIST_FILE = SparkNetworks/Configurations/Info.plist;
+				INFOPLIST_FILE = Assignment/Configurations/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -703,7 +703,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = LVZF2MY9UJ;
-				INFOPLIST_FILE = SparkNetworks/Configurations/Info.plist;
+				INFOPLIST_FILE = Assignment/Configurations/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -723,7 +723,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = LVZF2MY9UJ;
-				INFOPLIST_FILE = SparkNetworksTests/Info.plist;
+				INFOPLIST_FILE = AssignmentTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -734,7 +734,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SparkNetworks.app/SparkNetworks";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Assignment.app/Assignment";
 			};
 			name = Debug;
 		};
@@ -745,7 +745,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = LVZF2MY9UJ;
-				INFOPLIST_FILE = SparkNetworksTests/Info.plist;
+				INFOPLIST_FILE = AssignmentTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -756,14 +756,14 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SparkNetworks.app/SparkNetworks";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Assignment.app/Assignment";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		DF587BE5244AFC3000468A11 /* Build configuration list for PBXProject "SparkNetworks" */ = {
+		DF587BE5244AFC3000468A11 /* Build configuration list for PBXProject "Assignment" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				DF587C07244AFC3200468A11 /* Debug */,
@@ -772,7 +772,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		DF587C09244AFC3200468A11 /* Build configuration list for PBXNativeTarget "SparkNetworks" */ = {
+		DF587C09244AFC3200468A11 /* Build configuration list for PBXNativeTarget "Assignment" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				DF587C0A244AFC3200468A11 /* Debug */,
@@ -781,7 +781,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		DF587C0C244AFC3200468A11 /* Build configuration list for PBXNativeTarget "SparkNetworksTests" */ = {
+		DF587C0C244AFC3200468A11 /* Build configuration list for PBXNativeTarget "AssignmentTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				DF587C0D244AFC3200468A11 /* Debug */,

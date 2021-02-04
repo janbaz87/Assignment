@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:SparkNetworks.xcodeproj">
+      location = "self:/Users/janbazali/SparkNetworks/SparkNetworks/Assignment.xcodeproj">
    </FileRef>
 </Workspace>
