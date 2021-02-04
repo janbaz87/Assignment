@@ -1,4 +1,4 @@
-# SparkNetworks
+# Assignment
 <p><h4>Personality test project in swift</h4></p>
 
 ___
