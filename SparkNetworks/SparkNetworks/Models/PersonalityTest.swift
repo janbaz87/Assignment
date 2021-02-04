@@ -65,14 +65,11 @@ struct Range: Decodable {
     let to: Int
 }
 
-
-
 //MARK: MOCK Data
 extension PersonalityTest {
     static var mocked : PersonalityTest {
-        /// we can return mock data from here
-        return PersonalityTest.init(categories: ["hard_facr","passion"], questions: [Question.mockedText])
-         
+        /// returning fake data
+        return PersonalityTest.init(categories: ["hard_facr","passion"], questions: [Question.mockedRange , Question.mockedConditional])
     }
 }
 
